@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+	.content {
+		flex-direction: column;
+	}
+
+	.column {
+		flex: 100%;
+		padding: 20px 0;
+	}
+
+	.empty-column {
+		display: none;
+	}
+
+	.row {
+		flex-direction: column;
+	}
+
+	.column {
+		margin-bottom: 20px;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.square-container {
+		width: calc((100% / 6) + 40px);
+		height: calc((100% / 6) + 40px);
+	}
+}

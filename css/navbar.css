@@ -1,0 +1,117 @@
+.navbar {
+	background-color: white;
+	color: black;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar:hover {
+	background-color: black;
+	color: white;
+}
+
+.navbar-brand {
+	font-size: 1.5rem;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+	transition: filter 0.3s ease;
+}
+
+.navbar:hover img {
+	filter: invert(100%);
+}
+
+.hamburger {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.hamburger i {
+	font-size: 24px;
+	color: black;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.navbar:hover .hamburger i {
+	color: white;
+}
+
+#closeIcon {
+	display: none;
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	right: -50%;
+	width: 50%;
+	height: 100%;
+	background-color: white;
+	color: black;
+	transition: right 0.3s ease;
+	z-index: 999;
+	padding-top: 40px;
+}
+
+.menu.active {
+	right: 0;
+}
+
+.navbar-menu {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-top: 250px;
+	padding: 20px;
+}
+
+.navbar-item {
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.navbar-item a {
+	color: black;
+	text-decoration: none;
+	font-size: 1.5rem;
+	transition: color 0.3s ease;
+}
+
+.navbar-item a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	background-color: black;
+	transition: width 0.3s ease;
+}
+
+.navbar-item a:hover::after {
+	width: 100%;
+}
+
+.navbar-item a:hover {
+	color: black;
+}
+
+.navbar-item a:hover::after {
+	background-color: white;
+}
